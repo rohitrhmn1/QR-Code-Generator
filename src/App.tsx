@@ -262,11 +262,11 @@ function App() {
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-lg">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg px-4">
             QR Code Generator
           </h1>
-          <p className="text-xl text-white/90 drop-shadow-md">
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 drop-shadow-md px-4">
             Create customizable QR codes with logos, colors, and more
           </p>
         </div>
@@ -275,16 +275,16 @@ function App() {
           {/* Left Panel - Controls */}
           <div className="space-y-6">
             {/* Quick Presets */}
-            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
-              <h2 className="text-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-4">
+            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-4 sm:p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <h2 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-3 sm:mb-4">
                 Quick Presets
               </h2>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-3">
                 {presets.map((preset) => (
                   <button
                     key={preset.name}
                     onClick={() => setActiveModal(preset.type)}
-                    className="flex items-center gap-2 p-3 bg-gradient-to-r from-primary-50 to-accent-50 hover:from-primary-100 hover:to-accent-100 rounded-lg transition-all duration-200 border border-primary-200 hover:border-primary-300 hover:shadow-md"
+                    className="flex items-center justify-center sm:justify-start gap-2 p-3 bg-gradient-to-r from-primary-50 to-accent-50 hover:from-primary-100 hover:to-accent-100 rounded-lg transition-all duration-200 border border-primary-200 hover:border-primary-300 hover:shadow-md"
                   >
                     <preset.icon className="w-4 h-4 text-primary-600" />
                     <span className="text-sm font-medium text-slate-700">
@@ -296,7 +296,7 @@ function App() {
             </div>
 
             {/* Main Input */}
-            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
+            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-4 sm:p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
               <label className="block text-sm font-semibold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-2">
                 Content (URL, Text, etc.)
               </label>
@@ -304,7 +304,7 @@ function App() {
                 value={config.text}
                 onChange={(e) => updateConfig("text", e.target.value)}
                 placeholder="Enter URL, text, or any data..."
-                className="w-full px-4 py-3 border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none transition-all resize-none bg-white/70 backdrop-blur-sm hover:bg-white"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none transition-all resize-none bg-white/70 backdrop-blur-sm hover:bg-white"
                 rows={4}
               />
               <p className="mt-2 text-xs text-slate-600 font-medium">
@@ -313,8 +313,8 @@ function App() {
             </div>
 
             {/* Basic Settings */}
-            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
-              <h2 className="text-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-4 flex items-center gap-2">
+            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-4 sm:p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <h2 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-3 sm:mb-4 flex items-center gap-2">
                 <Settings className="w-5 h-5 text-primary-600" />
                 Basic Settings
               </h2>
@@ -365,10 +365,10 @@ function App() {
             </div>
 
             {/* Advanced Settings */}
-            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
+            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-4 sm:p-6 border border-white/20 hover:shadow-glow transition-all duration-300">
               <button
                 onClick={() => setShowAdvanced(!showAdvanced)}
-                className="w-full flex items-center justify-between text-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-4"
+                className="w-full flex items-center justify-between text-lg sm:text-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-3 sm:mb-4"
               >
                 <span className="flex items-center gap-2">
                   <Palette className="w-5 h-5 text-primary-600" />
@@ -383,7 +383,7 @@ function App() {
 
               {showAdvanced && (
                 <div className="space-y-4 pt-2">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">
                         Foreground Color
@@ -403,7 +403,7 @@ function App() {
                           onChange={(e) =>
                             updateConfig("fgColor", e.target.value)
                           }
-                          className="flex-1 px-3 py-2 border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none bg-white/70 hover:bg-white transition-all"
+                          className="flex-1 px-2 sm:px-3 py-2 text-sm border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none bg-white/70 hover:bg-white transition-all"
                         />
                       </div>
                     </div>
@@ -427,7 +427,7 @@ function App() {
                           onChange={(e) =>
                             updateConfig("bgColor", e.target.value)
                           }
-                          className="flex-1 px-3 py-2 border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none bg-white/70 hover:bg-white transition-all"
+                          className="flex-1 px-2 sm:px-3 py-2 text-sm border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none bg-white/70 hover:bg-white transition-all"
                         />
                       </div>
                     </div>
@@ -543,8 +543,8 @@ function App() {
 
           {/* Right Panel - Preview */}
           <div className="lg:sticky lg:top-8 lg:h-fit">
-            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/20 hover:shadow-glow-lg transition-all duration-300">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-6 text-center">
+            <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-white/20 hover:shadow-glow-lg transition-all duration-300">
+              <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-4 sm:mb-6 text-center">
                 Preview
               </h2>
 
@@ -560,22 +560,26 @@ function App() {
                 />
               </div>
 
-              {/* Preview - displays the final composited canvas */}
-              <div className="flex justify-center mb-6">
-                <div className="rounded-2xl border-2 border-primary-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                  <canvas ref={finalCanvasRef} className="block" />
+              {/* Preview - displays the final composited canvas at fixed responsive size */}
+              <div className="flex justify-center mb-4 sm:mb-6">
+                <div className="rounded-2xl border-2 border-primary-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden w-full max-w-[280px] sm:max-w-xs md:max-w-sm aspect-square flex items-center justify-center bg-white">
+                  <canvas
+                    ref={finalCanvasRef}
+                    className="block w-full h-full object-contain"
+                    style={{ imageRendering: 'pixelated' }}
+                  />
                 </div>
               </div>
 
               <button
                 onClick={downloadQR}
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-bold rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl"
+                className="w-full flex items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-bold rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl"
               >
-                <Download className="w-5 h-5" />
+                <Download className="w-4 sm:w-5 h-4 sm:h-5" />
                 Download QR Code
               </button>
 
-              <div className="mt-6 p-5 bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl border border-primary-200">
+              <div className="mt-4 sm:mt-6 p-4 sm:p-5 bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl border border-primary-200">
                 <h3 className="text-sm font-bold text-primary-700 mb-3 flex items-center gap-2">
                   <span className="text-lg">💡</span> Tips:
                 </h3>
@@ -603,7 +607,7 @@ function App() {
         </div>
 
         {/* Footer */}
-        <div className="mt-12 text-center text-sm text-white/80 drop-shadow-md">
+        <div className="mt-8 sm:mt-12 text-center text-xs sm:text-sm text-white/80 drop-shadow-md px-4">
           <p className="font-medium">
             Built with React, TypeScript, and Tailwind CSS 4
           </p>
