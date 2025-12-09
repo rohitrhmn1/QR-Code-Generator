@@ -5,4 +5,5 @@ import tsconfig from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfig()],
+  base: process.env.VITE_BASE || "/",
 });
