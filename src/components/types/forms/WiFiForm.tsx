@@ -51,7 +51,7 @@ export const WiFiForm = ({ onSubmit, defaultValues }: WiFiFormProps) => {
             required: "Network name is required",
           })}
           placeholder="MyWiFiNetwork"
-          className="w-full px-4 py-3 border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none transition-all bg-white/70 backdrop-blur-sm hover:bg-white"
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none transition-all bg-white/70 backdrop-blur-sm hover:bg-white"
         />
         {errors.ssid && (
           <p className="mt-1 text-sm text-red-600">{errors.ssid.message}</p>
@@ -102,7 +102,7 @@ export const WiFiForm = ({ onSubmit, defaultValues }: WiFiFormProps) => {
                 : false,
             })}
             placeholder="WiFi password"
-            className="w-full px-4 py-3 border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none transition-all bg-white/70 backdrop-blur-sm hover:bg-white"
+            className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border-2 border-primary-200 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-200/50 outline-none transition-all bg-white/70 backdrop-blur-sm hover:bg-white"
           />
           {errors.password && (
             <p className="mt-1 text-sm text-red-600">
@@ -130,7 +130,7 @@ export const WiFiForm = ({ onSubmit, defaultValues }: WiFiFormProps) => {
 
       <button
         type="submit"
-        className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-bold rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl"
+        className="w-full flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-bold rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl"
       >
         Generate QR Code
       </button>
